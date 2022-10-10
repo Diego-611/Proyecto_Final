@@ -1,0 +1,10 @@
+{% extends "AppUsuario/profile.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 style="color:black">PERFIL DE {{ nusuario }}</h1>
+{% endblock %}
+
+{% block editar %}
+<a class="btn btn-primary" href="{%url 'UMessage' user%}">ENVIAR MENSAJE</a>
+{% endblock %}

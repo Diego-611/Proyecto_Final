@@ -1,0 +1,22 @@
+{% extends "AppMensajeria/blogmessage.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 style="color:black">ENVIA TU MENSAJE A {{ receptor }}</h1>
+{% endblock %}
+
+{% block subtitulo %}
+
+{% endblock %}
+
+{% block formulario %}
+<form action="{% url 'UMessage' receptor1.id%}" method="POST"> {% csrf_token %}
+    <table>
+    {{ formulario.media }}
+    {{ formulario.as_p }}
+    </table>
+    <button type="submit">ENVIAR</button>
+</form>
+{% endblock %}
+
+

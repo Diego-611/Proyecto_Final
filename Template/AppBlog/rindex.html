@@ -1,0 +1,9 @@
+{% extends "AppBlog/index.html" %}
+{% load static %}
+
+{% block titulo %}
+<a class="btn btn-primary" href="{% url 'BMessage' %}">Enviar Blog</a>
+<a class="btn btn-primary" href="{% url 'IMessage' %}">Mensajeria</a>
+<a class="btn btn-danger" href="{% url 'LogoutUser' %}">Cerrar Sesion</a>
+<a href="{% url 'Profile' %}"><img height="55px" src="{{ imagen }}" alt=""></a>
+{% endblock %}
